@@ -668,3 +668,25 @@ footer a:hover {
         font-size: 1rem; /* Smallest text on very small screens */
     }
 }
+/* Add styles that should be applied on scroll for smaller screens */
+.scroll-active {
+    background: var(--btn-hover-bg);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-blurred {
+    filter: blur(4px);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.scroll-overlay {
+    opacity: 1;
+}
+
+.scroll-inactive {
+    background: var(--service-item-background);
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    filter: none;
+}
