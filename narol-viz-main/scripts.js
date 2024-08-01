@@ -18,11 +18,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-// Check for touch support and add a class to the body if true
-function isTouchDevice() {
-    return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
-}
-
-if (isTouchDevice()) {
-    document.body.classList.add('touch');
-}
