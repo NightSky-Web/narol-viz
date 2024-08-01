@@ -587,18 +587,25 @@ footer a:hover {
     .hero-content {
         font-size: 1.5rem;
     }
+
+    .about-text h2 {
+        font-size: 1.8rem; /* Adjust for smaller screens */
+    }
+
+    .about-text p {
+        font-size: 1.1rem; /* Adjust for smaller screens */
+    }
 }
 
 @media (max-width: 480px) {
-    @media (max-width: 480px) {
-        header {
-            padding: 0.5rem 0;
-        }
-    
-        nav ul li {
-            margin: 0.5rem 0;
-        }
+    header {
+        padding: 0.5rem 0;
     }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
     .hero {
         height: 50vh;
         padding: 1rem;
@@ -619,29 +626,8 @@ footer a:hover {
     form input, form textarea, form button {
         padding: 0.75rem;
     }
-}
-/* Responsive adjustments for .about-image */
-@media (max-width: 1200px) {
-    .about-image img {
-        transform: scale(1); /* Ensure image scales correctly */
-    }
 
-    .about-image .overlay {
-        font-size: 1.4rem; /* Slightly smaller text on medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .about-image img {
-        transform: scale(1); /* Ensure image scales correctly */
-    }
-
-    .about-image .overlay {
-        font-size: 1.2rem; /* Smaller text on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
+    /* Adjustments for about-image */
     .about-image img {
         transform: scale(1); /* Ensure image scales correctly */
     }
@@ -649,22 +635,24 @@ footer a:hover {
     .about-image .overlay {
         font-size: 1rem; /* Smallest text on very small screens */
     }
-}
-/* Responsive adjustments for .about-text p */
-@media (max-width: 1200px) {
-    .about-text p {
-        font-size: 1.2rem; /* Slightly smaller text on medium screens */
-    }
-}
 
-@media (max-width: 768px) {
-    .about-text p {
-        font-size: 1.1rem; /* Smaller text on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
+    /* Adjustments for about-text */
     .about-text p {
         font-size: 1rem; /* Smallest text on very small screens */
+    }
+}
+
+/* Responsive adjustments for touch devices */
+@media (pointer: coarse) {
+    /* Add touch interaction styles if needed */
+    .service-item, .info-card, .contact-content {
+        /* Enable touch feedback by increasing the size of clickable areas */
+        touch-action: manipulation;
+    }
+
+    .service-item:active, .info-card:active, .contact-content:active {
+        /* Add a different visual state for touch interactions */
+        transform: scale(0.98);
+        background: var(--hover-bg);
     }
 }
