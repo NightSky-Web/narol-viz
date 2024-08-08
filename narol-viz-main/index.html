@@ -12,6 +12,7 @@
             <ul>
                 <li><a href="#home">Lap teteje</a></li>
                 <li><a href="#about-us">Rólunk</a></li>
+                <li><a href="#slider-section">Referencia</a></li>
                 <li><a href="#services">Szolgáltatások</a></li>
                 <li><a href="#contact">Kapcsolat</a></li>
             </ul>
@@ -35,7 +36,7 @@
                     <p>A Narol-víz Bt. szakemberei számára az épületgépészeti munkák területe nem ismeretlen. Cégünk széles körű szolgáltatásokat nyújt, amelyek magukban foglalják az új házak teljes körű épületgépészeti munkáinak kivitelezését, valamint a régi házak átalakítását és felújítását is.</p>
                 </div>
                 <div class="about-image">
-                    <img src="narol-logo.jpg" alt="About Us">
+                    <img src="narol-logo.png" alt="About Us">
                     <div class="overlay">
                         <p>Keressen minket Bizalommal!</p>
                     </div>
@@ -57,7 +58,19 @@
             </div>
         </div>
     </section>
-
+    
+    <section id="slider-section">
+        <div class="slider">
+            <div class="slides">
+                <img src="images/image1.jpg" alt="Image 1">
+                <img src="images/image2.jpg" alt="Image 2">
+                <img src="images/image3.jpg" alt="Image 3">
+                <!-- More images can be added here -->
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
     <section id="services">
         <div class="container">
             <h2>Szolgáltatás lista</h2>
@@ -138,16 +151,12 @@
     </section>
   
     <footer>
-        <p>&copy; 2024 Narol-víz Bt. Minden jog. <br>
+        <p>&copy; 2024 Narol-víz Bt. Minden jog fenntartva.<br>
         <a href="#home">Vissza a lap tetejére</a>
     </footer>
 
     <script src="scripts.js"></script>
-    <script>
-        // JavaScript to scroll to the top on page load
-        window.addEventListener('load', function() {
-            window.scrollTo(0, 0);
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
+
 </body>
 </html>
