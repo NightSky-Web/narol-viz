@@ -669,26 +669,55 @@ footer a:hover {
     }
 }
 
-/* Disable hover effects on touch devices */
-@media (hover: none) {
-    .hover-effect {
-        pointer-events: none; /* Disable hover-specific CSS */
+@media (max-width: 768px) {
+    header {
+        position: relative; /* Change to relative so it's not sticky */
+        padding: 0.75rem 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-content {
+        font-size: 1.5rem;
     }
 }
-/* Default styles */
-.hover-effect {
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    /* Other default styles */
-}
 
-/* Hover effect (for desktop) */
-.hover-effect:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-}
+@media (max-width: 480px) {
+    header {
+        position: relative; /* Ensures header is not sticky on small screens */
+        padding: 0.5rem 0;
+    }
 
-/* In-view effect (for touch devices) */
-.hover-effect.in-view {
-    transform: scale(1.1);
-    opacity: 0.8;
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .hero {
+        height: 50vh;
+        padding: 1rem;
+    }
+
+    .hero-content {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.25rem;
+    }
+
+    form input, form textarea, form button {
+        padding: 0.75rem;
+    }
 }
