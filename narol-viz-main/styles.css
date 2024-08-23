@@ -122,7 +122,8 @@ nav ul li a:hover {
 
 .hero {
     position: relative;
-    background: url('header.jpg') no-repeat center center/cover;
+    background: url('header.jpg') no-repeat center center; /* Remove /cover from the shorthand */
+    background-size: cover; /* Ensures the image covers the entire area */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -133,6 +134,11 @@ nav ul li a:hover {
     margin: 0;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        background-size: contain; /* On smaller screens, prevent stretching */
+    }
+}
 .hero::before {
     content: "";
     position: absolute;
@@ -661,4 +667,28 @@ footer a:hover {
     .about-text p {
         font-size: 1rem; /* Smallest text on very small screens */
     }
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+    .hover-effect {
+        pointer-events: none; /* Disable hover-specific CSS */
+    }
+}
+/* Default styles */
+.hover-effect {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Other default styles */
+}
+
+/* Hover effect (for desktop) */
+.hover-effect:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* In-view effect (for touch devices) */
+.hover-effect.in-view {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
