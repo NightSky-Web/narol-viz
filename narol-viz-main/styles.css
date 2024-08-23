@@ -14,7 +14,6 @@
     --contact-bg-hover: #333;
     --about-bg: #1e1e1e;
     --about-text-color: #e0e0e0;
-    
 }
 
 html {
@@ -29,7 +28,6 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-size: 1.2rem;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -88,18 +86,18 @@ p {
     font-size: 1.1rem;
 }
 
-/* Default header styling */
 header {
     background: var(--header-background);
     color: var(--header-text);
     padding: 1rem 0;
     text-align: center;
-    position: fixed; /* Sticky on larger screens */
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     opacity: 0.9; /* Slightly increased opacity for better visibility */
 }
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -217,7 +215,7 @@ nav ul li a:hover {
 /* Basic styles for .about-image */
 .about-image {
     position: relative;
-    max-width: 50%;
+    max-width: 40%;
     overflow: hidden;
     border-radius: 8px;
     margin: 0 auto; /* Center align the image */
@@ -243,7 +241,6 @@ nav ul li a:hover {
     text-align: center;
     opacity: 0;
     transition: opacity 0.5s ease;
-    transition: transform 0.3s ease-in-out;
     font-size: 1.5rem;
 }
 
@@ -255,7 +252,6 @@ nav ul li a:hover {
 
 .about-image:hover .overlay {
     opacity: 1;
-    transform: scale(2);
 }
 
 .about-stats {
@@ -305,89 +301,25 @@ nav ul li a:hover {
     color: #fff;
 }
 
-/* Slider Container */
-.slider {
-    position: relative;
-    max-width: 80%; /* Adjust width as needed */
-    margin: auto;
-    overflow: hidden;
-    height: 500px; /* Set a fixed height for the slider (adjust as needed) */
-    border-radius: 8px; /* Rounded corners for the slider container */
+section {
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+    background: var(--section-background);
+    transition: background 0.3s;
 }
 
-/* Slides Container */
-.slides {
-    display: flex;
-    transition: transform 0.8s ease-in-out; /* Smooth transition */
-    will-change: transform; /* Performance optimization */
+section:hover {
+    background: #e0e0e0;
 }
 
-/* Image Styling */
-.slides img {
-    width: 100%; /* Ensure images fit the width of the container */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 100%; /* Ensure images do not exceed container height */
-    object-fit: cover; /* Resize images to cover the container */
-    border-radius: 8px; /* Rounded corners for the images */
-    flex: 0 0 100%; /* Each image takes full container width */
+h2 {
+    margin-top: 0;
 }
 
-/* Navigation Buttons */
-button {
-    position: absolute;
-    top: 50%;
-    width: 60px; /* Increased size for better usability */
-    height: 60px; /* Increased size for better usability */
-    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 30px; /* Larger font size for better visibility */
-    transform: translateY(-50%);
-    z-index: 10; /* Ensure buttons are above images */
-    border-radius: 5px; /* Rounded corners for buttons */
-    transition: background-color 0.3s ease;
+ul {
+    padding: 0;
+    list-style: none;
 }
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.prev {
-    left: 10px; /* Adjust position as needed */
-}
-
-.next {
-    right: 10px; /* Adjust position as needed */
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .slider {
-        height: 400px; /* Adjust height for medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .slider {
-        height: 300px; /* Adjust height for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .slider {
-        height: 250px; /* Adjust height for very small screens */
-    }
-
-    button {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-    }
-}
-
-
-
 
 .btn {
     display: inline-block;
@@ -634,13 +566,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
     header {
-        position: static; /* Make header non-sticky on mobile screens */
         padding: 0.75rem 0;
-    }
-
-    /* Ensure navigation items are properly displayed */
-    nav ul {
-        text-align: center;
     }
 
     nav ul li {
@@ -658,15 +584,15 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-    @media (max-width: 480px) {
-        header {
-            padding: 0.5rem 0;
-        }
-    
-        nav ul li {
-            margin: 0.5rem 0;
-        }
+    header {
+        padding: 0.5rem 0;
     }
+
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
     .hero {
         height: 50vh;
         padding: 1rem;
